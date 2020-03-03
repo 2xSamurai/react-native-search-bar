@@ -172,6 +172,12 @@ public class RNSearchBarManager extends SimpleViewManager<SearchView> {
             searchView.setBackgroundColor(Color.WHITE);
         } else {
             searchView.setBackgroundColor(color);
+            int searchPlateId = searchView.getContext().getResources()
+                    .getIdentifier("android:id/search_plate", null, null);
+            View searchPlateView = searchView.findViewById(searchPlateId);
+            if (searchPlateView != null) {
+                searchPlateView.setBackgroundColor(Color.WHITE); //depand you can set
+            }
         }
     }
 
